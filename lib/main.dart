@@ -72,6 +72,10 @@ class _MyHomePageState extends State<MyHomePage> {
                         width: 60.0,
                         height: 60.0,
                         margin: EdgeInsets.all(4.0),
+                        child: Image.network(
+                          "https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg",
+                          fit: BoxFit.cover,
+                        ),
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           color: Colors.grey.shade300,
