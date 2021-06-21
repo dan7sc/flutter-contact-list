@@ -68,17 +68,15 @@ class _MyHomePageState extends State<MyHomePage> {
               Container(
                 child: Stack(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.all(4.0),
-                      child: Container(
+                    Container(
                         width: 60.0,
                         height: 60.0,
+                        margin: EdgeInsets.all(4.0),
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           color: Colors.grey.shade300,
                         ),
                       ),
-                    ),
                     Positioned(
                       bottom: 9.0,
                       right: 9.0,
