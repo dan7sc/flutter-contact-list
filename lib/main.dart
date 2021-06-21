@@ -85,11 +85,21 @@ class _MyHomePageState extends State<MyHomePage> {
                       bottom: 9.0,
                       right: 9.0,
                       child: Container(
-                        width: 10.0,
-                        height: 10.0,
+                        width: 12.0,
+                        height: 12.0,
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
-                          color: Colors.green.shade300,
+                          color: Colors.white,
+                        ),
+                        child: Center(
+                          child: Container(
+                            width: 10.0,
+                            height: 10.0,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.green.shade300,
+                            ),
+                          ),
                         ),
                       ),
                     ),
