@@ -57,7 +57,21 @@ class _MyHomePageState extends State<MyHomePage> {
         centerTitle: false,
         backgroundColor: Colors.white,
       ),
-      body: Container(
+      body: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              width: 60.0,
+              height: 60.0,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.grey,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
