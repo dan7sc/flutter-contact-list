@@ -99,6 +99,11 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Container(
                         width: 20.0,
                         height: 20.0,
+                        child: Icon(
+                          Icons.star,
+                          size: 15.0,
+                          color: Colors.white,
+                        ),
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           color: Colors.yellow.shade700,
