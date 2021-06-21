@@ -66,7 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 12.0),
+                padding: const EdgeInsets.only(left: 16.0),
                 child: Container(
                   child: Stack(
                     children: [
@@ -124,6 +124,24 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ],
                   ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 16.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Text(
+                      "Jennifer Fritz",
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight. w500,
+                      ),
+                    ),
+                    Text("Jennifer Fritz"),
+                  ],
                 ),
               ),
             ],
