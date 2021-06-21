@@ -76,12 +76,15 @@ class _MyHomePageState extends State<MyHomePage> {
                         color: Colors.grey,
                       ),
                     ),
-                    Container(
-                      width: 10.0,
-                      height: 10.0,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.green,
+                    Align(
+                      alignment: Alignment.bottomRight,
+                      child: Container(
+                        width: 10.0,
+                        height: 10.0,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.green,
+                        ),
                       ),
                     ),
                   ],
