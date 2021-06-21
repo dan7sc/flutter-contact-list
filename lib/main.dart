@@ -68,22 +68,38 @@ class _MyHomePageState extends State<MyHomePage> {
               Container(
                 child: Stack(
                   children: [
-                    Container(
-                      width: 60.0,
-                      height: 60.0,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.grey,
+                    Padding(
+                      padding: const EdgeInsets.all(4.0),
+                      child: Container(
+                        width: 60.0,
+                        height: 60.0,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.grey.shade300,
+                        ),
                       ),
                     ),
-                    Align(
-                      alignment: Alignment.bottomRight,
+                    Positioned(
+                      bottom: 9.0,
+                      right: 9.0,
                       child: Container(
                         width: 10.0,
                         height: 10.0,
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
-                          color: Colors.green,
+                          color: Colors.green.shade300,
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      top: 0.0,
+                      left: 0.0,
+                      child: Container(
+                        width: 20.0,
+                        height: 20.0,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.yellow.shade700,
                         ),
                       ),
                     ),
