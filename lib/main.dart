@@ -62,13 +62,25 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              width: 60.0,
-              height: 60.0,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: Colors.grey,
-              ),
+            Stack(
+              children: [
+                Container(
+                  width: 60.0,
+                  height: 60.0,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.grey,
+                  ),
+                ),
+                Container(
+                  width: 10.0,
+                  height: 10.0,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.green,
+                  ),
+                ),
+              ],
             ),
           ],
         ),
