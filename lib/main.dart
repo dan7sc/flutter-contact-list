@@ -66,7 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -82,13 +82,16 @@ class _MyHomePageState extends State<MyHomePage> {
                               width: 60.0,
                               height: 60.0,
                               margin: EdgeInsets.all(4.0),
-                              child: Image.network(
-                                "https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg",
-                                fit: BoxFit.cover,
-                              ),
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Colors.grey.shade300,
+                                image: DecorationImage(
+                                  fit: BoxFit.cover,
+                                  alignment: Alignment.center,
+                                  image: NetworkImage(
+                                    "https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg",
+                                  ),
+                                ),
                               ),
                             ),
                             Positioned(
@@ -139,7 +142,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisSize: MainAxisSize.max,
+                        mainAxisSize: MainAxisSize.min,
                         children: [
                           Text(
                             "Jennifer Fritz",
@@ -152,7 +155,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             height: 8.0,
                           ),
                           Container(
-                            width: 250,
+                            width: 200,
                             child: Flex(
                               direction: Axis.vertical,
                               mainAxisSize: MainAxisSize.min,
@@ -168,40 +171,44 @@ class _MyHomePageState extends State<MyHomePage> {
                               ],
                             ),
                           ),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Text(
-                                "05/06",
-                              ),
-                              SizedBox(
-                                height: 4.0,
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(left: 16.0),
-                                child: Center(
-                                  child: Text(
-                                    "3",
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                    ),
-                                  ),
-                                ),
-                                width: 24.0,
-                                height: 24.0,
-                                decoration: BoxDecoration(
-                                  color: Colors.blue,
-                                  shape: BoxShape.circle,
-                                ),
-                              ),
-                            ],
-                          ),
                         ],
                       ),
                     ),
                   ],
+                ),
+                Container(
+                  child: Padding(
+                    padding: const EdgeInsets.all(6.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Text(
+                          "05/06",
+                        ),
+                        SizedBox(
+                          height: 4.0,
+                        ),
+                        Container(
+                          child: Center(
+                            child: Text(
+                              "3",
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                          width: 24.0,
+                          height: 24.0,
+                          decoration: BoxDecoration(
+                            color: Colors.blue,
+                            shape: BoxShape.circle,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
               ],
             ),
