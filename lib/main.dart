@@ -66,7 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 16.0),
+                padding: const EdgeInsets.all(16.0),
                 child: Container(
                   child: Stack(
                     children: [
@@ -140,7 +140,26 @@ class _MyHomePageState extends State<MyHomePage> {
                         fontWeight: FontWeight. w500,
                       ),
                     ),
-                    Text("Jennifer Fritz"),
+                    SizedBox(
+                      height: 8.0,
+                    ),
+                    Container(
+                      width: 250,
+                      child: Flex(
+                        direction: Axis.vertical,
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Flexible(
+                            child: Text(
+                              "Jon it differed repeated wandered required in. Then girl neat why. Jon it differed repeated wandered required in. Then girl neat why",
+                              softWrap: true,
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
