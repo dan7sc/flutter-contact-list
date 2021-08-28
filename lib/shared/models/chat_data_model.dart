@@ -22,4 +22,6 @@ class ChatData {
   String get dateToShow => DateTime.now().day == this.lastMessageDate.day
       ? DateFormat("hh:mm").format(this.lastMessageDate)
       : DateFormat("dd:MM").format(this.lastMessageDate);
+
+  bool get hasUnreadMessages => unreadMessages > 0;
 }

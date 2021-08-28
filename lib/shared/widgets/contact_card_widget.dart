@@ -101,24 +101,29 @@ class ContactCard extends StatelessWidget {
                   Text(
                     "${chatData.dateToShow}",
                   ),
-                  SizedBox(
-                    height: 4.0,
-                  ),
-                  Container(
-                    child: Center(
-                      child: Text(
-                        "${chatData.unreadMessages}",
-                        style: TextStyle(
-                          color: Colors.white,
+                  if(chatData.hasUnreadMessages) ...[
+                    SizedBox(
+                      height: 4.0,
+                    ),
+                    Container(
+                      child: Center(
+                        child: Text(
+                          "${chatData.unreadMessages}",
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
                         ),
                       ),
+                      width: 24.0,
+                      height: 24.0,
+                      decoration: BoxDecoration(
+                        color: Colors.blue,
+                        shape: BoxShape.circle,
+                      ),
                     ),
-                    width: 24.0,
-                    height: 24.0,
-                    decoration: BoxDecoration(
-                      color: Colors.blue,
-                      shape: BoxShape.circle,
-                    ),
+                  ] else
+                  SizedBox(
+                    height: 28.0,
                   ),
                 ],
               ),
