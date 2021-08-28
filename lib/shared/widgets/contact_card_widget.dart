@@ -1,4 +1,5 @@
 import 'package:contact_list/shared/models/chat_data_model.dart';
+import 'package:contact_list/shared/widgets/online_widget.dart';
 import 'package:contact_list/shared/widgets/profile_image_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -31,28 +32,13 @@ class ContactCard extends StatelessWidget {
                       ProfileImage(
                         profileImageUrl: chatData.profileImage,
                       ),
-                      Positioned(
+                      chatData.isOnline
+                      ? Positioned(
                         bottom: 9.0,
                         right: 9.0,
-                        child: Container(
-                          width: 12.0,
-                          height: 12.0,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white,
-                          ),
-                          child: Center(
-                            child: Container(
-                              width: 10.0,
-                              height: 10.0,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Colors.green.shade300,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
+                        child: OnlineWidget(),
+                      )
+                      : SizedBox(),
                       Positioned(
                         top: 0.0,
                         left: 0.0,
