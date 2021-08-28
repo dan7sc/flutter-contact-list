@@ -1,4 +1,5 @@
 import 'package:contact_list/shared/models/chat_data_model.dart';
+import 'package:contact_list/shared/widgets/profile_image_widget.dart';
 import 'package:flutter/material.dart';
 
 class ContactCard extends StatelessWidget {
@@ -27,19 +28,8 @@ class ContactCard extends StatelessWidget {
                 child: Container(
                   child: Stack(
                     children: [
-                      Container(
-                        width: 60.0,
-                        height: 60.0,
-                        margin: EdgeInsets.all(4.0),
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.grey.shade300,
-                          image: DecorationImage(
-                            fit: BoxFit.cover,
-                            alignment: Alignment.center,
-                            image: NetworkImage(chatData.profileImage),
-                          ),
-                        ),
+                      ProfileImage(
+                        profileImageUrl: chatData.profileImage,
                       ),
                       Positioned(
                         bottom: 9.0,
