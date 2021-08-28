@@ -45,12 +45,42 @@ class _MyHomePageState extends State<MyHomePage> {
         centerTitle: false,
         backgroundColor: Colors.white,
       ),
-      body: ListView.separated(
-        separatorBuilder: (context, index) => Divider(),
-        itemCount: controller.lastChats.length,
-        itemBuilder: (context, index) => ContactCard(
-          chatData: controller.lastChats[index],
-        ),
+      // body: ListView.separated(
+      //   separatorBuilder: (context, index) => Divider(),
+      //   itemCount: controller.lastChats.length,
+      //   itemBuilder: (context, index) => ContactCard(
+      //     chatData: controller.lastChats[index],
+      //   ),
+      // ),
+      body: Flex(
+        direction: Axis.vertical,
+        children: [
+          Flexible(
+            flex: 1,
+            child: Container(
+              color: Colors.blue,
+              width: double.infinity,
+              height: 100,
+            ),
+          ),
+          Flexible(
+            flex: 5,
+            child: SingleChildScrollView(
+              child: Column(
+                children: controller.lastChats
+                .map((e) => ContactCard(chatData: e))
+                .toList()),
+            ),
+          ),
+          Flexible(
+            flex: 1,
+            child: Container(
+              color: Colors.red,
+              width: double.infinity,
+              height: 100,
+            ),
+          ),
+        ],
       ),
     );
   }
