@@ -1,4 +1,4 @@
-import 'package:contact_list/shared/widgets/contact_card_widget.dart';
+import 'package:contact_list/shared/widgets/widgets_export.dart';
 import 'package:flutter/material.dart';
 
 import 'home_controller.dart';
