@@ -1,3 +1,5 @@
+import 'package:intl/intl.dart';
+
 class ChatData {
   final String name;
   final String profileImage;
@@ -16,4 +18,8 @@ class ChatData {
     required this.isOnline,
     required this.isFavorite,
   });
+
+  String get dateToShow => DateTime.now().day == this.lastMessageDate.day
+      ? DateFormat("hh:mm").format(this.lastMessageDate)
+      : DateFormat("dd:MM").format(this.lastMessageDate);
 }

@@ -99,7 +99,7 @@ class ContactCard extends StatelessWidget {
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Text(
-                    "${chatData.lastMessageDate.day}/${chatData.lastMessageDate.month}",
+                    "${chatData.dateToShow}",
                   ),
                   SizedBox(
                     height: 4.0,
